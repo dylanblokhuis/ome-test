@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  stream:
+    image: airensoft/ovenmediaengine:latest
+    volumes:
+      - ./Server.xml:/opt/ovenmediaengine/bin/origin_conf/Server.xml
+    ports:
+      - 1935:1935
+      - 3333:3333
+      - 3478:3478
+      - 8080:8080
+      - 9000:9000
+      - 9999:9999/udp
+      - 4000-4005:4000-4005/udp
+      - 10006-10010:10006-10010/udp
